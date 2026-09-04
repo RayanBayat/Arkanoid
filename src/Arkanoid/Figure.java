@@ -1,40 +1,42 @@
 package Arkanoid;
 
-
-
-public class Figure {
-    
-    protected int x, y;
-    
 /**
- * Konstruktor för klassen Figure
- * @param x x koordinat för figure
- * @param y y koordinat för figure
+ * Base class for everything that lives in the playfield.
+ *
+ * <p>Coordinates are doubles rather than ints so that motion stays smooth and
+ * frame-rate independent: every entity is advanced by a delta time in seconds
+ * instead of "one pixel per tick".</p>
  */
-    public Figure(int x, int y) {
+public abstract class Figure {
+
+    protected double x;
+    protected double y;
+
+    protected Figure(double x, double y) {
         this.x = x;
         this.y = y;
-
     }
 
-    public void run() {
-        this.x *= x;
-        this.y *= y;
-    }
+    /**
+     * Advances this entity.
+     *
+     * @param dt elapsed time in seconds since the previous step
+     */
+    public abstract void update(double dt);
 
-    public int getX() {
+    public double getX() {
         return x;
     }
 
-    public void setX(int x) {
-        this.x = x;
-    }
-
-    public int getY() {
+    public double getY() {
         return y;
     }
 
-    public void setY(int y) {
+    public void setX(double x) {
+        this.x = x;
+    }
+
+    public void setY(double y) {
         this.y = y;
     }
 }

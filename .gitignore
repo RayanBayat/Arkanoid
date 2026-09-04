@@ -27,3 +27,9 @@ bin/
 
 ### Mac OS ###
 .DS_Store
+
+### Runtime data ###
+settings.properties
+
+### Accidental local shell data ###
+Microsoft/
