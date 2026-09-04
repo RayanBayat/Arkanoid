@@ -1,0 +1,47 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#080713">
+  <title>ARKANOID // RESONANCE</title>
+  <meta name="description" content="A generative, musical brick-breaker built with pure Java.">
+  <style>
+    :root { color-scheme: dark; --ink:#edf8ff; --muted:#a6b9cf; --cyan:#72ddff; --gold:#ffd166; }
+    * { box-sizing:border-box }
+    body { margin:0; color:var(--ink); font:16px/1.6 system-ui,sans-serif; background:#080713 radial-gradient(circle at 50% 15%,#202245 0,#0e0b20 34%,#080713 72%); }
+    main { width:min(1080px,92vw); margin:auto; padding:72px 0; text-align:center }
+    .eyebrow { color:var(--cyan); font-size:.76rem; font-weight:800; letter-spacing:.42em }
+    h1 { margin:.2em 0 0; font-size:clamp(3rem,8vw,6.5rem); line-height:.9; letter-spacing:-.06em; text-shadow:0 0 28px #55cfff88 }
+    h1 span { display:block; margin-top:1.2rem; color:var(--cyan); font-size:clamp(.75rem,2vw,1.1rem); letter-spacing:.65em }
+    .lead { max-width:680px; margin:30px auto; color:var(--muted); font-size:1.15rem }
+    .hero { width:min(640px,100%); border:1px solid #72ddff55; border-radius:18px; box-shadow:0 30px 90px #000,0 0 36px #72ddff20 }
+    .downloads { display:flex; flex-wrap:wrap; justify-content:center; gap:12px; margin:34px 0 }
+    .button { padding:13px 20px; border:1px solid #72ddff77; border-radius:10px; color:var(--ink); background:#72ddff18; font-weight:750; text-decoration:none }
+    .button.primary { color:#10111e; background:var(--gold); border-color:var(--gold) }
+    section { margin-top:80px }
+    .grid { display:grid; grid-template-columns:repeat(3,1fr); gap:18px; text-align:left }
+    .card { padding:24px; border:1px solid #8dcfff28; border-radius:14px; background:#ffffff08 }
+    .card h3 { margin:0 0 8px; color:var(--cyan) } .card p { margin:0; color:var(--muted) }
+    code { color:var(--gold) } footer { margin-top:80px; color:#7389a2 }
+    @media(max-width:700px){ .grid{grid-template-columns:1fr} main{padding-top:44px} }
+  </style>
+</head>
+<body><main>
+  <div class="eyebrow">GENERATIVE · MUSICAL · REPLAYABLE</div>
+  <h1>ARKANOID<span>RESONANCE</span></h1>
+  <p class="lead">Every level, palette, chord progression, and relic draft is generated from a reproducible seed. No engine. No external assets. Just Java.</p>
+  <img class="hero" src="media/gameplay.webp" alt="ARKANOID Resonance gameplay">
+  <div class="downloads">
+    <a class="button primary" href="https://github.com/RayanBayat/Arkanoid/releases/latest">Download latest release</a>
+    <a class="button" href="https://github.com/RayanBayat/Arkanoid">View source</a>
+  </div>
+  <section class="grid">
+    <div class="card"><h3>Generated worlds</h3><p>Wave Function Collapse produces playable, mirrored levels with perceptual Oklab palettes.</p></div>
+    <div class="card"><h3>Playable music</h3><p>A live synthesizer scores the run while each destroyed brick adds a note to the current key.</p></div>
+    <div class="card"><h3>No Java required</h3><p>Release downloads bundle their own runtime for Windows, macOS, and Linux.</p></div>
+  </section>
+  <section><p>Building from source? Install JDK 21, then run <code>./mvnw package</code>.</p></section>
+  <footer>ARKANOID // RESONANCE · Created by Rayan Bayat</footer>
+</main></body>
+</html>

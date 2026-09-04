@@ -5,6 +5,7 @@
 **A generative, musical brick-breaker built with pure Java.**
 
 ![Java](https://img.shields.io/badge/Java-21-ED8B00?logo=openjdk&logoColor=white)
+![Build](https://github.com/RayanBayat/Arkanoid/actions/workflows/build.yml/badge.svg)
 ![Dependencies](https://img.shields.io/badge/dependencies-none-65D1FF)
 ![Renderer](https://img.shields.io/badge/renderer-Java2D-8F7CFF)
 ![Levels](https://img.shields.io/badge/levels-procedural-FFD166)
@@ -12,6 +13,10 @@
 ![ARKANOID Resonance gameplay](docs/media/gameplay.webp)
 
 [Download the gameplay clip (MP4)](docs/media/gameplay.mp4)
+
+[Download](https://github.com/RayanBayat/Arkanoid/releases/latest) ·
+[Website](https://rayanbayat.github.io/Arkanoid/) ·
+[Builds](https://github.com/RayanBayat/Arkanoid/actions/workflows/build.yml)
 
 </div>
 
@@ -34,18 +39,38 @@ Pure Java + AWT/Swing — no engine, no libraries, no asset files of any kind.
   </tr>
 </table>
 
-## Running
+## Download
 
-There is no JDK on this machine's `PATH`; IntelliJ's bundled JetBrains Runtime
-(a full JDK 21) works. Run from the project root — the `Lastscore` high-score
-file is resolved against the working directory.
+Download the latest self-contained build from
+[GitHub Releases](https://github.com/RayanBayat/Arkanoid/releases/latest).
+Choose Windows, macOS, or Linux, extract it, and launch `Arkanoid-Resonance`.
+Java is bundled—you do not need to install a JDK or Maven to play.
 
-```sh
-JDK="/c/Program Files/JetBrains/IntelliJ IDEA Community Edition 2025.2.6.2/jbr/bin"
+Every tag named `vX.Y.Z` is built automatically for all three platforms. The
+same downloads are linked from the
+[project website](https://rayanbayat.github.io/Arkanoid/).
 
-"$JDK/javac" -d out src/Arkanoid/*.java
-"$JDK/java"  -cp out Arkanoid.Arkanoid
+## Build from source
+
+The only prerequisite is **JDK 21 or newer**. The included Maven Wrapper
+downloads the correct Maven version automatically.
+
+```bash
+# macOS / Linux
+./mvnw clean package
+java -jar target/arkanoid-resonance.jar
 ```
+
+```powershell
+# Windows PowerShell
+.\mvnw.cmd clean package
+java -jar target\arkanoid-resonance.jar
+```
+
+For development, `./mvnw exec:java` builds and launches the game directly.
+Release versions come from Git tags through Maven's CI-friendly `revision`
+property; `flatten-maven-plugin` writes resolved metadata without editing the
+source POM.
 
 Add `-Darkanoid.debug=true` for a frame-timing overlay, a periodic timing log,
 and `K` to force-clear a level (useful for exercising level transitions).
