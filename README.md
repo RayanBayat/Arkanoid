@@ -9,7 +9,9 @@
 ![Renderer](https://img.shields.io/badge/renderer-Java2D-8F7CFF)
 ![Levels](https://img.shields.io/badge/levels-procedural-FFD166)
 
-![ARKANOID Resonance gameplay](docs/media/gameplay.gif)
+![ARKANOID Resonance gameplay](docs/media/gameplay.webp)
+
+[Download the gameplay clip (MP4)](docs/media/gameplay.mp4)
 
 </div>
 
@@ -21,21 +23,16 @@ Pure Java + AWT/Swing — no engine, no libraries, no asset files of any kind.
 
 <table>
   <tr>
-    <td width="50%"><img src="docs/media/title.png" alt="Generative title screen"></td>
-    <td width="50%"><img src="docs/media/settings.png" alt="Settings screen"></td>
+    <td width="33%"><img src="docs/media/gameplay.png" alt="Gameplay"></td>
+    <td width="33%"><img src="docs/media/settings.png" alt="Settings screen"></td>
+    <td width="33%"><img src="docs/media/about.png" alt="About screen"></td>
   </tr>
   <tr>
-    <td align="center"><sub>Every seed creates a new visual and musical identity.</sub></td>
-    <td align="center"><sub>Audio, video, gameplay, accessibility, and run data controls.</sub></td>
+    <td align="center"><sub>Generative levels and reactive effects.</sub></td>
+    <td align="center"><sub>Player controls that save automatically.</sub></td>
+    <td align="center"><sub>Controls and technology at a glance.</sub></td>
   </tr>
 </table>
-
-<details>
-<summary><strong>About screen</strong></summary>
-
-![About ARKANOID Resonance](docs/media/about.png)
-
-</details>
 
 ## Running
 
